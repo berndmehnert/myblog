@@ -4,7 +4,7 @@
 
 ![Create new blog post](blog2.png)
 
-![Read details](blog1.png)
+![Read details](blog3.png)
 
 
 
