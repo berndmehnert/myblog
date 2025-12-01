@@ -1,4 +1,4 @@
-# Simple blog written using python, Django, bootstrap
+# Simple blog written using Python, Django, Bootstrap
 
 ![Post list](blog1.png)
 
