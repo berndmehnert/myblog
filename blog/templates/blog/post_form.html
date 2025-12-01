@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Create a New Post{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Create a New Post</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="id_title" class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" id="id_title" value="{{ form.title.value }}">
+        {% if form.title.errors %}
+            <div class="text-danger">{{ form.title.errors }}</div>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        <label for="id_content" class="form-label">Content</label>
+        <textarea name="content" class="form-control" id="id_content" rows="5">{{ form.content.value }}</textarea>
+        {% if form.content.errors %}
+            <div class="text-danger">{{ form.content.errors }}</div>
+        {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="{% url 'post_list' %}" class="btn btn-secondary">Back to Blog</a>
+</form>
+{% endblock %}
